@@ -31,7 +31,7 @@ const DistributorSignin = () => {
     } else {
       // dispatchDistributor({ type: 'DISTRIBUTOR', payload: true });
       window.alert('Signin Successful');
-      distributorHistory.push('/Dashboard');
+      distributorHistory.push('/dashboard');
     }
   };
 
