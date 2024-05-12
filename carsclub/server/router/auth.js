@@ -79,11 +79,17 @@ router.use(require('../adminSideModules/deleteuser'))
 router.use(require('../adminSideModules/getallusers'))
 router.use(require('../adminSideModules/deletemessage'))
 
-
-
-
-
-
-
+// Distributor Side Modules
+router.use(require('../distributor/signinDistributor'));
+router.use(require('../distributor/signoutDistributor'));
+router.use(require('../distributor/signupDistributor'));
+// router.use(require('../distributor/getdistributordata'));
+router.use(require('../distributor/addsalecardistributor'));
+router.use(require('../distributor/getallsalecardistributor'));
+router.use(require('../distributor/deletesalecardistributor'));
+// Add more distributor modules as needed...
+router.use(require('../distributor/addrentcarsdistributor'))
+router.use(require('../distributor/getallrentcarsdistributor'))
+router.use(require('../distributor/incomeforrentcarsdistributor'))
 
 module.exports = router;

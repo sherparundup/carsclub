@@ -10,6 +10,18 @@ dotenv.config({ path: './config.env' });
 require('./database/conn'); 
 // const User = require('./models/userSchema');
 
+const corsOptions = {
+    options: [
+        "http://localhost:4000",
+        "http://localhost:4001",
+        "http://127.0.0.1:4000",
+        "http://127.0.0.1:4001",
+        "http://0.0.0.0:4000",
+        "http://0.0.0.0:4001",
+    ],
+    credentials: true
+}
+app.use(cors(corsOptions))
 app.use(express.json());
 app.use(cookieParser());
 
