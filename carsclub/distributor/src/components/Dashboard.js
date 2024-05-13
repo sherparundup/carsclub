@@ -2,18 +2,19 @@ import React, {useEffect, useContext} from 'react';
 import "../dashboard.css";
 import {NavLink, useHistory} from "react-router-dom";
 
-import { DistributorContext } from "../App"
+import { AdminContext } from "../App"
+
 
 const Dashboard = () => {
-   
-  const {distributerState, dispatchdistributer} = useContext(DistributorContext)
+
+  const { adminState, dispatchadmin } = useContext(AdminContext) || {};
 
   const history = useHistory();
 
   const callDashboard =  async () =>{
       try {
-          const res = await fetch('/Dashboard', {
-            method: "GET",
+        const res = await fetch('http://localhost:5000/distributordashboard', {
+          method: "GET",
             headers: {
               Accept : "application/json",
               "Content-Type" : "application/json"
@@ -31,19 +32,19 @@ const Dashboard = () => {
       } catch (error) {
         console.log(error)
         history.push("/signin");
-      }
+      } 
   }
 
 
-  useEffect(() => {
-    callDashboard();
-  }, [])
+  // useEffect(() => {
+  //   callDashboard();
+  // }, [])
 
 
 
 const Loginbutton= () =>{
         
-  if(distributerState){
+  if(adminState){
       return <div> 
           <button className="logoutbtnDash"><NavLink  to="/adminsignout">logout</NavLink></button>      
       </div>
@@ -70,7 +71,7 @@ const Loginbutton= () =>{
       <ul className="nav-links">
         {/* <li className="active"> */}
         <li>
-            <NavLink className="dashlinks" to="/Dashboard">
+            <NavLink className="dashlinks" to="/dashboard">
             <i className='bx bx-grid-alt' ></i>
             <span className="allLinks_name">Dashboard</span>
             </NavLink>

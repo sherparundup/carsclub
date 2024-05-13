@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react'
 import { useHistory } from "react-router-dom";
-// import Home from "./components/Dashboard";
-
 
 
 
@@ -36,7 +34,7 @@ const AdminSignout = () => {
 
     return (
         <>
-<h1>okkk</h1>
+            <h1>Log Out</h1>
         </>
     )
 }

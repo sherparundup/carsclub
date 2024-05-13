@@ -89,7 +89,7 @@ const AdminSignin = () => {
                                     <input type="submit" value="signin" onClick={signinAdmin} />
                                 </div>
                             </form>
-                            <h3> don't have an account <NavLink style={{color: "#52f8ab"}} to="/adminsignup">create one</NavLink></h3>
+                            {/* <h3> don't have an account <NavLink style={{color: "#52f8ab"}} to="/adminsignup">create one</NavLink></h3> */}
                             <button className="btn"><NavLink className="nav-link" to="/signin">Signin As User</NavLink></button>
 
                         </div>

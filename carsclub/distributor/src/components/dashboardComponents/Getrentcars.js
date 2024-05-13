@@ -32,7 +32,8 @@ let carIdFromDashBoard;
   const deleteUser = (e) =>{
     carIdFromDashBoard = e.target.id;
 
-    return fetch("/deleteRentCarFromDashboard", {
+
+    return fetch("http://localhost:5000/deleteRentCarFromDashboard", {
       method: "POST",
       headers:{
           "Content-Type" : "application/json"
@@ -67,7 +68,7 @@ let carIdFromDashBoard;
 <div className="sidebar">
     <div className="logo-details">
       <i className='bx bxl-c-plus-plus'></i>
-      <span className="logo_name">Cars Club</span>
+      <span className="logo_name">VROOM</span>
     </div>
       <ul className="nav-links">
         {/* <li className="active"> */}

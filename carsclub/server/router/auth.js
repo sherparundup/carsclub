@@ -73,6 +73,7 @@ router.use(require('../adminSideModules/incomeforsalecars'))
 router.use(require('../adminSideModules/addrentcars'))
 router.use(require('../adminSideModules/getallrentcars'))
 router.use(require('../adminSideModules/incomeforrentcars'))
+router.use(require('../adminSideModules/deletrentcars'))
 
 // Admin Side Modules---for--- Users
 router.use(require('../adminSideModules/deleteuser'))
@@ -87,6 +88,8 @@ router.use(require('../distributor/signupDistributor'));
 router.use(require('../distributor/addsalecardistributor'));
 router.use(require('../distributor/getallsalecardistributor'));
 router.use(require('../distributor/deletesalecardistributor'));
+router.use(require('../distributor/distributorDashboardRoute'));
+
 // Add more distributor modules as needed...
 router.use(require('../distributor/addrentcarsdistributor'))
 router.use(require('../distributor/getallrentcarsdistributor'))
